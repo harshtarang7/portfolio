@@ -50,6 +50,7 @@ export default function ProjectSections() {
 
     const handleTag=(newTag)=>{
         setTag(newTag)
+        scrollToProjectSection();
     }
 
     const filteredPro=Project_data.filter((project)=>
@@ -67,7 +68,7 @@ export default function ProjectSections() {
     };
   return (
     <div >
-      <h2>My Projects</h2>
+      <h2 className='text-white text-4xl'>My Projects</h2>
       <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
         <ProjectTab onClick={handleTag} isSelected={tag==="All"} name="All"/>
         <ProjectTab onClick={handleTag} isSelected={tag==="Web"} name="Web"/>
