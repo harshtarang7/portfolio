@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState, useTransition } from 'react';
+import React, { useEffect, useRef, useState, useTransition } from 'react';
 import Image from 'next/image';
 import TabButtons from './TabButtons';
 
@@ -48,7 +48,7 @@ const Tab_Data=[
 
 export default function AboutSection() {
 
-    const aboutRef = useRef(null);
+    const contentRef = useRef(null);
 
     let[tabOpen, settabOpen]=useState("skills");
     let[isPending, startTransition]=useTransition();
@@ -56,18 +56,18 @@ export default function AboutSection() {
     const handletabChange=(id)=>{
         startTransition(()=>{
             settabOpen(id);
-            scrollToAboutSection(); // Call scrollToAboutSection after changing the tab
+            
         });
     };
 
-    const scrollToAboutSection = () => {
-        if (aboutRef.current) {
-            aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    const scrollToContent = () => {
+        if (contentRef.current) {
+            contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
 
     return (
-        <section ref={aboutRef} id='about'>
+        <section id='about'>
             <div className="text-white">
                 <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
                     <div>
@@ -88,7 +88,7 @@ export default function AboutSection() {
                             <TabButtons selectTab={()=>handletabChange("certifications")} active={tabOpen==="certifications"}>Certifications</TabButtons>
 
                         </div>
-                        <div className='mt-8'>
+                        <div className='mt-8' ref={contentRef}>
                             {Tab_Data.find((t)=>t.id ===tabOpen).Content}
                         </div>
                     </div>
