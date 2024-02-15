@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 import Loader from "./components/Loader";
+import {PageTransition} from '@steveeeie/react-page-transition'
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
     
     const timeout = setTimeout(() => {
       setIsLoading(false); 
-    }, 2000); 
+    }, 500); 
 
     return () => clearTimeout(timeout); 
   }, []);
@@ -33,8 +34,8 @@ export default function Home() {
   return (
    <>
     <main className="flex min-h-screen flex-col bg-[#121212]  ">
-     
-      {isLoading ? ( // Conditionally render the Loader component
+    
+      {isLoading ? ( 
           <Loader />
         ) : (
           <>
@@ -57,7 +58,7 @@ export default function Home() {
       <ProjectSections/>
       <EmailSection/>
       </div> */}
-     
+      
     </main>
    </>
   );

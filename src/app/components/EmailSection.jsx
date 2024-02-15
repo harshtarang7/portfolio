@@ -4,6 +4,8 @@ import { faFacebook, faGithub, faInstagram, faLinkedin, faYoutube } from '@forta
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import emailjs from '@emailjs/browser';
 import Link from 'next/link';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function EmailSection() {
   const emailRef = useRef(null);
@@ -25,7 +27,19 @@ export default function EmailSection() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          form.current.reset();
+          
+          toast.success('mail sent successfully',{
+            position: "top-center",
+            autoClose: 2999,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+           
+          });
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -34,7 +48,8 @@ export default function EmailSection() {
   };
 
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-24' id='Contact' ref={emailRef}>
+    <section className='grid grid-cols-2 md:grid-cols-2 my-12 md:my-12 py-24 gap-24' id='Contact' ref={emailRef}>
+      
       <div>
         <h5 className='text-xl font-bold text-white my-2'>Let&apos;s Connect</h5>
         <p className='text-[#ADB7BE] mb-4 max-w-md'>
@@ -118,6 +133,19 @@ export default function EmailSection() {
           </button>
         </form>
       </div>
+      <ToastContainer 
+      position="top-center"
+      autoClose={2999}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      
+      />
     </section>
   );
 }
