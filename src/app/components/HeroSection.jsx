@@ -16,8 +16,8 @@ export default function HeroSection() {
         animate={{opacity:1 , scale:1}} 
         transition={{duration:0.5}} 
         className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className=" text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-pink-600">Hi There,</h1>
-          <h1 className="text-white lg:text-6xl text-4xl sm:text-5xl  font-bold ">
+          <h1 className=" text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-pink-600">Hi There,</h1>
+          <h1 className="text-white lg:text-5xl text-xl sm:text-2xl  font-bold ">
            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">I&apos;m </span> 
             
            <TypeAnimation
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </p>
 
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 to-pink-500 hover:bg-slate-200 text-white">Hire Me</button>
+            <button className="px-6 py-3 w-[200px] sm:w-[150px] rounded-full mr-4 bg-gradient-to-br from-blue-500 to-pink-500 hover:bg-slate-200 text-white">Hire Me</button>
             {/* to download cv */}
             {/* <a >
               <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to bg-pink-400 hover:bg-slate-800 text-white  mt-3 "> 

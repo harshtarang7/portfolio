@@ -28,7 +28,7 @@ export default function EmailSection() {
       .then(
         () => {
           form.current.reset();
-          
+
           toast.success('mail sent successfully',{
             position: "top-center",
             autoClose: 2999,
@@ -48,7 +48,7 @@ export default function EmailSection() {
   };
 
   return (
-    <section className='grid grid-cols-2 md:grid-cols-2 my-12 md:my-12 py-24 gap-24' id='Contact' ref={emailRef}>
+    <section className='grid  md:grid-cols-2 my-12 md:my-12 py-24 gap-24' id='Contact' ref={emailRef}>
       
       <div>
         <h5 className='text-xl font-bold text-white my-2'>Let&apos;s Connect</h5>

@@ -11,7 +11,7 @@ const Project_data=[
         description:"API fetching, Add to cart",
         image: "/projects/ecomm.png",
         tag:["All", "Web"],
-        gitUrl:"/",
+        gitUrl:"https://github.com/harshtarang7/ecomm_web1",
         PreviewUrl:"/"
     },
     {
@@ -29,7 +29,7 @@ const Project_data=[
         description:"API fetching, accurate weather data",
         image: "/projects/weather.png",
         tag:["All", "Web"],
-        gitUrl:"/",
+        gitUrl:"https://github.com/harshtarang7/WeatherApp",
         PreviewUrl:"/"
     },
     {
@@ -38,7 +38,7 @@ const Project_data=[
         description:"API fetching, Add to cart, context, dynamic product detail",
         image: "/projects/reactEcomm.png",
         tag:["All", "Web"],
-        gitUrl:"/",
+        gitUrl:"https://github.com/harshtarang7/ecommerce-React.js",
         PreviewUrl:"/"
     },
 ]
@@ -68,7 +68,7 @@ export default function ProjectSections() {
     };
   return (
     <div >
-      <h2 className='text-white text-4xl'>My Projects</h2>
+      <h2 className='text-white text-4xl text-center'>My Projects</h2>
       <div className='text-white flex flex-row justify-center items-center gap-2 py-6'>
         <ProjectTab onClick={handleTag} isSelected={tag==="All"} name="All"/>
         <ProjectTab onClick={handleTag} isSelected={tag==="Web"} name="Web"/>
