@@ -28,11 +28,12 @@ export default function Home() {
   return (
    <>
     <main className="flex min-h-screen flex-col bg-[#121212]  ">
-    <motion.div style={{
+    <motion.div  style={{
                   position: 'sticky',
-                  top:'8%',
+                  top:'60px',
                   width: '100vw',
-                  height:'7px',
+                  height:'5px',
+                  zIndex:99,
                   backgroundColor :'#6547ff',
                   scaleX:scrollYProgress,
                   transformOrigin: 'left'
