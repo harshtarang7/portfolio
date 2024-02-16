@@ -30,7 +30,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#121212]  ">
     <motion.div style={{
                   position: 'sticky',
-                  top:'53px',
+                  top:'8%',
                   width: '100vw',
                   height:'7px',
                   backgroundColor :'#6547ff',
