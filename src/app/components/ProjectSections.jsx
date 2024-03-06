@@ -28,7 +28,7 @@ const Project_data=[
         title:"weather App using only HTML, CSS ,JS",
         description:"API fetching, accurate weather data",
         image: "/projects/weather.png",
-        tag:["All", "Web"],
+        tag:["All"],
         gitUrl:"https://github.com/harshtarang7/WeatherApp",
         PreviewUrl:"/"
     },
@@ -62,8 +62,8 @@ export default function ProjectSections() {
       animate:{y:0, opacity:1},
     }
     const scrollToProjectSection = () => {
-      if (projectRef.current) {
-        projectRef.current.scrollIntoView({ behavior: 'smooth' });
+      if (projectref.current) {
+        projectref.current.scrollIntoView({ behavior: 'smooth' });
       }
     };
   return (

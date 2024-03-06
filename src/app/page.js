@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import Header from "./Header";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -16,8 +15,8 @@ import Skills from "./components/Skills";
 import {motion , useScroll} from 'framer-motion'
 
 
-export default function Home() {
 
+export default function Home() {
   const { scrollYProgress }= useScroll()
 
   const scrollToTop = () => {
@@ -27,7 +26,9 @@ export default function Home() {
   
   return (
    <>
+
     <main className="flex min-h-screen flex-col bg-[#121212]  ">
+    
     <motion.div  style={{
                   position: 'sticky',
                   top:'60px',
@@ -41,6 +42,7 @@ export default function Home() {
 
                 </motion.div>
               <div className="container mt-24 mx-auto px-12 py-4">
+             
                 <Header/>
                 
                 <HeroSection/>
@@ -50,7 +52,7 @@ export default function Home() {
                 <EmailSection/>
               </div>
               <Footer/>
-              <button className="fixed bottom-[20%] left-10 text-2xl bg-gray-800 text-white py-2 px-4 rounded-md" onClick={scrollToTop}>
+              <button className="fixed bottom-[20%] left-10 text-2xl bg-gray-800 text-white py-2 px-4 rounded-md lg:block md:hidden sm:hidden" onClick={scrollToTop}>
               <FontAwesomeIcon icon={faArrowAltCircleUp}/>
             </button>
         
@@ -60,8 +62,9 @@ export default function Home() {
       <ProjectSections/>
       <EmailSection/>
       </div> */}
-      
+    
     </main>
+    
    </>
   );
 }

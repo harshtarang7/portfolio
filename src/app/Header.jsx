@@ -8,6 +8,8 @@ import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import MenuOverlay from "./components/MenuOverlay";
 
 
+
+
 const navLinks=[
   {
     title:"About",
@@ -25,6 +27,7 @@ const navLinks=[
 ]
 
 export default function Header() {
+ 
   const[navbarOpen,setNavbarOpen]=useState(false);
 
   const handleClick = (href) => (e) => {
@@ -36,11 +39,14 @@ export default function Header() {
     setNavbarOpen(false); // Close the navbar after clicking a link on mobile
   };
   return (
-    <nav className="fixed top-0 py-2 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-7">
-        <Link href={"/"} className="text-1xl md:text-4xl text-white font-semibold logo-text">
-          TARANG
-        </Link>
+    <nav className="fixed top-0 py-4 left-0 right-0 z-10 bg-[#121212]  bg-opacity-90 ">
+      
+      <div className="flex flex-wrap items-center justify-center mx-auto px-7">
+        
+        <div>
+        
+        </div>
+        
         <div className="mobile-menu block md:hidden  py-3">
           {
             !navbarOpen ?
