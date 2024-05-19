@@ -25,7 +25,6 @@ export default function Home() {
   
   
   return (
-   <>
 
     <main className="flex min-h-screen flex-col bg-[#121212]  ">
     
@@ -50,11 +49,11 @@ export default function Home() {
                 {/* <Skills/> */}
                 <ProjectSections/>
                 <EmailSection/>
+              <button className=" absolute top-[380%] left-10 text-2xl bg-gray-800 text-white py-2 px-4 rounded-md lg:block sm:hidden xs:hidden " onClick={scrollToTop}>
+              <FontAwesomeIcon icon={faArrowAltCircleUp} />
+            </button>
               </div>
               <Footer/>
-              <button className="fixed bottom-[20%] left-10 text-2xl bg-gray-800 text-white py-2 px-4 rounded-md lg:block md:hidden sm:hidden" onClick={scrollToTop}>
-              <FontAwesomeIcon icon={faArrowAltCircleUp}/>
-            </button>
         
       {/* <div className="container mt-24 mx-auto px-12 py-4">
       <HeroSection/>
@@ -64,7 +63,5 @@ export default function Home() {
       </div> */}
     
     </main>
-    
-   </>
   );
 }

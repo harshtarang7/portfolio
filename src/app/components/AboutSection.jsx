@@ -12,13 +12,13 @@ const Tab_Data=[
             <ul className='list-disc ms-5'>
                 <li>HTML</li>
                 <li>CSS</li>
+                <li>JavaScript</li>
                 <li>BootStrap</li>
                 <li>Responsive Design</li>
                 <li>TailwindCSS</li>
-                <li>JavaScript</li>
-                <li>React.js</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
+                <li>Front-end: (React.js,Next.js)</li>
+                <li>Back-end : (Node.js,NestJS)</li>
+                <li>Database : (MongoDB,MYSQL)</li>
             </ul>
         )
     },
@@ -40,7 +40,7 @@ const Tab_Data=[
                 <li>Introduction to python</li>
                 <li>JavaScript full Course</li>
                 <li>HTML & CSS full Course</li>
-                <li>MERN STACK <span className='underline text-green-200'>(going on)</span></li>
+                <li>MERN STACK </li>
             </ul>
         )
     },

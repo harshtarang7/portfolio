@@ -28,7 +28,7 @@ const Project_data=[
         title:"weather App using only HTML, CSS ,JS",
         description:"API fetching, accurate weather data",
         image: "/projects/weather.png",
-        tag:["All"],
+        tag:["All", "Web"],
         gitUrl:"https://github.com/harshtarang7/WeatherApp",
         PreviewUrl:"/"
     },

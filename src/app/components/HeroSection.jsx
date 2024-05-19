@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useRef } from "react";
 import Image from'next/image'
 import {motion} from 'framer-motion'
 
@@ -8,6 +8,16 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 export default function HeroSection() {
+
+  const emailRef = useRef(null);
+
+  const scrollToContactSection = () => {
+    if (emailRef.current) {
+      emailRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -25,13 +35,12 @@ export default function HeroSection() {
         // Same substring at the start will only be typed out once, initially
         'Tarang Harsh',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'a Front-End Developer',
+        'a Full Stack Developer',
         1000,
        
       ]}
       wrapper="span"
       speed={50}
-      
       repeat={Infinity}
     />
           </h1>
@@ -40,7 +49,7 @@ export default function HeroSection() {
           </p>
 
           <div>
-            <button className="px-6 py-3 w-[200px] sm:w-[150px] rounded-full mr-4 bg-gradient-to-br from-blue-500 to-pink-500 hover:bg-slate-200 text-white">Hire Me</button>
+            <button ref={emailRef} className="px-6 py-3 w-[200px] sm:w-[150px] rounded-full mr-4 bg-gradient-to-br from-blue-500 to-pink-500 hover:bg-slate-200 text-white">Hire Me</button>
             {/* to download cv */}
             {/* <a >
               <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to bg-pink-400 hover:bg-slate-800 text-white  mt-3 "> 
